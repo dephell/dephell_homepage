@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DepHell</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Python project management">
+    <meta name="author" content="Gram">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <style>
+      .code {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        margin-top: 10px;
+      }
+
+      .code .function {
+        color: #27ae60;
+      }
+      .code .operator {
+        color: #27ae60;
+      }
+
+      .clipboard {
+        display: block;
+        float: right;
+        margin-top: -7px;
+        margin-right: -12px;
+      }
+    </style>
+  </head>
+
+  <body class="container-fluid row justify-content-center">
+    <div class="col-sm-6 text-center">
+      <h1 class="mt-5">
+        <img src="./logo.svg" alt="DepHell" style="width: 100%"/>
+      </h1>
+      <p class="lead">Python project management tool</p>
+      <a href="https://github.com/dephell/dephell" role="button" class="btn btn-dark btn-lg btn-block">
+        <i class="fab fa-github"></i>
+        GitHub
+      </a>
+      <a href="https://docs.dephell.org" role="button" class="btn btn-dark btn-lg btn-block">
+        <i class="fas fa-book"></i>
+        Docs
+      </a>
+
+      <div class="code text-light alert bg-dark" id="code">
+        <span class="function">curl</span>
+        install.dephell.org
+        <span class="operator">|</span>
+        python3
+
+        <button class="btn btn-dark clipboard" type="button" data-clipboard-target="#code">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <script src="https://clipboardjs.com/dist/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <script>
+      var clipboard = new ClipboardJS('.btn');
+      clipboard.on('success', function(e) {
+          Swal.fire({
+            title: 'Copied!',
+            text: 'Now put it in your console',
+            type: 'success',
+            confirmButtonText: '<i class="fa fa-thumbs-up"></i> ok'
+          })
+        e.clearSelection();
+      });
+
+    </script>
+  </body>
+</html>
