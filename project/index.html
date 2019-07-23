@@ -13,7 +13,6 @@
     <style>
       .code {
         font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-        margin-top: 10px;
       }
 
       .code .function {
@@ -32,32 +31,37 @@
     </style>
   </head>
 
-  <body class="container-fluid row justify-content-center">
-    <div class="col-sm-6 text-center">
-      <h1 class="mt-5">
-        <img src="./logo.svg" alt="DepHell" style="width: 100%"/>
-      </h1>
-      <p class="lead">Python project management tool</p>
-      <a href="https://github.com/dephell/dephell" role="button" class="btn btn-dark btn-lg btn-block">
-        <i class="fab fa-github"></i>
-        GitHub
-      </a>
-      <a href="https://dephell.org/docs/" role="button" class="btn btn-dark btn-lg btn-block">
-        <i class="fas fa-book"></i>
-        Docs
-      </a>
+  <body class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-sm-6 text-center">
 
-      <div class="code text-light alert bg-dark" id="code">
-        <span class="function">curl</span>
-        -L dephell.org/install
-        <span class="operator">|</span>
-        python3
+        <h1 class="mt-5">
+          <img src="./logo.svg" alt="DepHell" style="width: 100%"/>
+        </h1>
+        <p class="lead">Python project management tool</p>
 
-        <button class="btn btn-dark clipboard" type="button" data-clipboard-target="#code">
-          <i class="fas fa-copy"></i>
-        </button>
+        <a href="https://github.com/dephell/dephell" role="button" class="btn btn-dark btn-lg btn-block">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+
+        <a href="https://dephell.org/docs/" role="button" class="btn btn-dark btn-lg btn-block">
+          <i class="fas fa-book"></i>
+          Docs
+        </a>
+
+        <div class="code text-light alert bg-dark mt-2" id="code">
+          <span class="function">curl</span>
+          -L dephell.org/install
+          <span class="operator">|</span>
+          python3
+
+          <button class="btn btn-dark clipboard" type="button" data-clipboard-target="#code">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+
       </div>
-
     </div>
 
     <script src="https://clipboardjs.com/dist/clipboard.min.js"></script>
